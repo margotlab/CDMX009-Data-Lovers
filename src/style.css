@@ -1,0 +1,34 @@
+* {
+    background-color: #77D5FD;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+
+}
+
+
+
+header div h1 {
+    font-size: 35px;
+    display: inline-flex;
+    
+
+}
+
+nav {
+    background-color: #A0E2FE;
+}
+
+section {
+    background-color: white;
+}
+
+footer {
+    background-color: #77D5FD;
+}
