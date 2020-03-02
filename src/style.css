@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.izquierda {
+    height: 100%;
+    width: 20%;
+    background-color: yellow;
+}
+
+.derecha {
+    height: 100%;
+    width: 80%;
+    background-color: pink;
+}
+
+.principal {
+    height: 100%;
+    display: flex;
+    background-color: teal;
+}
