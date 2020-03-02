@@ -18,7 +18,11 @@ export const pokemones = {
             return pokemon.name.toLowerCase().includes(namePoke.toLowerCase());
         });
     },
-    filterByNumber() {
+    //aqui realice una modificacion
+    filterByNumber(numPoke) {
+        return data.pokemon.filter(pokemon => {
+            return pokemon.num.parseInt().includes(numPoke.parseInt());
+        } )
 
     },
     filterByType() {
