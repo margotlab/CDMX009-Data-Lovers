@@ -1,10 +1,5 @@
-// import data from './data/injuries/injuries.js';
-// import data from './data/lol/lol.js';
-// import data from './data/patient/patient.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-// import data from './data/steam/steam.js';
-// import data from './data/steam/worldbank.js';
+import pokemon from './data/pokemon/pokemon.js';
 
 // esta es una función de ejemplo
 export const example = () => {
@@ -19,16 +14,26 @@ export const pokemones = {
         });
     },
     //aqui realice una modificacion
-    filterByNumber(numPoke) {
-        return data.pokemon.filter(pokemon => {
-            return pokemon.num.parseInt().includes(numPoke.parseInt());
-        } )
+    findByNumber(numPoke) {
+        let pokemonFind = {};
 
+        data.pokemon.forEach(pokemon => {
+            if (parseInt(numPoke) === parseInt(pokemon.num)) {
+                pokemonFind = pokemon;
+            }
+        })
+
+        return pokemonFind;
     },
     filterByType() {
 
     },
     findAll() {
         return data.pokemon;
+    },
+
+    sortData() {
+        return pokemon.num.sort(function(a, b) { return a - b });
+
     },
 }

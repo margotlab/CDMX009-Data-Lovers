@@ -26,3 +26,10 @@ header {
     display: flex;
     background-color: teal;
 }
+
+.mycard {
+    background: black;
+    height: 250px;
+    width: 250px;
+    border-radius: 5%;
+}
