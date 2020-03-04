@@ -22,7 +22,7 @@ function ordenarMenorNum() {
 }
 //Funciona
 function findAll() {
-    let home = document.getElementById("derecha");
+    let home = document.getElementById("derecha"); //esta linea solo es para aderir la info al dom
     let arrayPoke = pokemones.findAll();
 
     arrayPoke.forEach(pokemon => {
@@ -30,7 +30,7 @@ function findAll() {
         home.appendChild(column);
     })
 }
-
+ 
 function findByNumber(numPoke) {
     let home = document.getElementById("derecha");
     let poke = pokemones.findByNumber(numPoke);
@@ -82,7 +82,30 @@ function sortByNameDown() {
     })
 }
 
-// sortByNameDown();
-// sortByNameUp();
+function sortByCandyCountUp() {
+    let home = document.getElementById("derecha");
+    let arrayPoke = pokemones.sortByCandyCountUp();
+
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+function sortByCandyCountDown() {
+    let home = document.getElementById("derecha");
+    let arrayPoke = pokemones.sortByCandyCount();
+
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+//sortByCandyCountUp()
+//sortByCandyCountDown();
+//sortByNameDown();
+//sortByNameUp();
 //findByNumber("10");
-filterByName("char");
+//filterByName("char");
+findAll()

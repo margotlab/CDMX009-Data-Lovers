@@ -22,7 +22,6 @@ export const pokemones = {
                 pokemonFind = pokemon;
             }
         })
-
         return pokemonFind;
     },
     filterByType() {
@@ -40,7 +39,6 @@ export const pokemones = {
             if (a.name < b.name) {
                 return -1;
             }
-            // a must be equal to b
             return 0;
         });
     },
@@ -53,8 +51,32 @@ export const pokemones = {
             if (a.name > b.name) {
                 return -1;
             }
-            // a must be equal to b
             return 0;
         });
+    },
+    sortByCandyCountUp() {
+        return data.pokemon.sort(function(a, b) {
+            if (a.candy_count > b.candy_count) {
+                return 1;
+            }
+            if (a.candy_count < b.candy_count) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+    sortByCandyCount() {
+        return data.pokemon.sort(function(a, b) {
+            if (a.candy_count < b.candy_count) {
+                return 1;
+            }
+            if (a.candy_count > b.candy_count) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+    findAllCandy() {
+        return data.pokemon.candy_count;
     }
 };
