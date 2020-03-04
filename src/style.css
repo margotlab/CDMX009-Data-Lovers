@@ -1,6 +1,7 @@
-body {
+* {
     margin: 0px;
     padding: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -18,7 +19,10 @@ header {
 .derecha {
     height: 100%;
     width: 80%;
-    background-color: pink;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .principal {
@@ -27,9 +31,25 @@ header {
     background-color: teal;
 }
 
-.mycard {
+.card {
     background: #F2F2F2;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 5%;
+    margin: 20px 30px;
+}
+
+.styleImg {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.cardText {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px;
+    color: #33475B;
+    font-weight: 500;
 }

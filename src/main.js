@@ -1,5 +1,5 @@
-import { example } from './data.js';
 import { pokemones } from './data.js';
+
 //Funciona
 function filterByName(name) {
     let home = document.getElementById("derecha");
@@ -41,41 +41,48 @@ function findByNumber(numPoke) {
 
 //Aqui realice la funcion para generar las tarjetas
 function generarTarjeta(pokemon) {
-    let column = document.createElement("div");
-    column.setAttribute("class", "col-3 mt-2");
-
     let card = document.createElement("div");
     card.setAttribute("class", "card");
 
-    // let image = document.createElement("img");
-    // image.setAttribute("class", "card-img-top");
-    // image.setAttribute("alt", pokemon.name);
-    // image.setAttribute("src", pokemon.img);
+    let cardHead = document.createElement("div");
 
-    // let cardBody = document.createElement("div");
-    // cardBody.setAttribute("class", "card-body", "background-color:#6ab150");
+    let image = document.createElement("img");
+    image.setAttribute("class", "styleImg");
+    image.setAttribute("alt", pokemon.name);
+    image.setAttribute("src", pokemon.img);
 
-    // let cardText = document.createElement("p");
-    // cardText.textContent = `${pokemon.name} ${pokemon.num}`;
+    let cardText = document.createElement("p");
+    cardText.setAttribute("class", "cardText")
+    cardText.textContent = `${pokemon.name} ${pokemon.num}`;
 
-    // cardBody.appendChild(cardText);
-    // card.appendChild(image);
-    // card.appendChild(cardBody);
-    // column.appendChild(card);
+    cardHead.appendChild(image);
+    card.appendChild(cardHead);
+    card.appendChild(cardText);
 
-    return column;
+    return card;
 }
 
-/* <div class="col-3">
-        <div class="mycard">
-                            <img src="" class="" alt="">
-                            <div class="myCardBody">
-                                <p class="cardText"></p>
-                            </div>
-                        </div>
-                    </div> */
+function sortByNameUp() {
+    let home = document.getElementById("derecha");
+    let arrayPoke = pokemones.sortByNameUp();
 
-//findAll();
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+function sortByNameDown() {
+    let home = document.getElementById("derecha");
+    let arrayPoke = pokemones.sortByNameDown();
+
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+// sortByNameDown();
+// sortByNameUp();
 //findByNumber("10");
-
-//filterByName("chari");
+filterByName("char");
