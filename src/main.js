@@ -1,5 +1,7 @@
 import { pokemones } from './data.js';
 
+
+
 let home = document.getElementById("derecha");
 let arrayPoke;
 //Declare una funcion para invocar 
@@ -24,6 +26,8 @@ function callFindAll() {
         home.appendChild(column);
     })
 }
+window.onload = callFindAll();
+
 //Funciona
 function findByNumber(enterNum) {
     arrayPoke = pokemones.findByNumber(enterNum);
