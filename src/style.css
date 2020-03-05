@@ -4,17 +4,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
+body {
+    background-color: #77D5FD;
+}
+
+
+/* header {
     height: 100px;
     width: 100%;
     background-color: aqua;
-}
-
-.izquierda {
-    height: 100%;
-    width: 20%;
-    background-color: yellow;
-}
+} */
 
 .derecha {
     height: 100%;
@@ -52,4 +51,47 @@ header {
     margin: 20px;
     color: #33475B;
     font-weight: 500;
+}
+
+
+/********************/
+
+footer {
+    background-color: #77D5FD;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside {
+    background-color: #A0E2FE;
+    /* width: 8rem; */
+    /* height: 100%; */
+    width: 20%;
+    justify-content: space-around;
+    /* max-width: 250px; */
+}
+
+nav {
+    max-height: 250px;
+    background-color: #A0E2FE;
+    justify-content: space-evenly;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+}
+
+header div h1 {
+    font-size: 35px;
+}
+
+header div img {
+    height: 80%;
+    align-self: center;
+    padding: 10px;
 }
