@@ -1,25 +1,78 @@
-body {
-    background-color: #77D5FD;
+* {
+    margin: 0px;
+    padding: 0px;
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-content: stretch;
-    flex-direction: column;
-    margin: 0;
-	padding: 0;
-	border: 0;
 }
 
+body {
+    background-color: #77D5FD;
+}
+
+
+/* header {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
+} */
+
+.derecha {
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.principal {
+    height: 100%;
+    display: flex;
+    background-color: teal;
+}
+
+.card {
+    background: #F2F2F2;
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    margin: 20px 30px;
+}
+
+.styleImg {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.cardText {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px;
+    color: #33475B;
+    font-weight: 500;
+}
+
+
+/********************/
+
+footer {
+    background-color: #77D5FD;
+}
 
 header {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
     align-items: center;
-
 }
 
-div {
-    display: flex;
-    flex-direction: row;
+aside {
+    background-color: #A0E2FE;
+    /* width: 8rem; */
+    /* height: 100%; */
+    width: 20%;
+    justify-content: space-around;
+    /* max-width: 250px; */
 }
 
 nav { 
@@ -41,23 +94,4 @@ header div img {
     height: 80%;
     align-self: center;
     padding: 10px;
-}
-
-div aside {
-    background-color: #A0E2FE;
-    width: 8rem;
-    justify-content: space-around;
-    max-width: 250px;
-}
-
-section {
-    background-color: white;
-    align-content: stretch;
-    flex-grow: 1;
-    justify-content: space-around;
-}
-
-footer {
-    background-color: #77D5FD;
-
 }
