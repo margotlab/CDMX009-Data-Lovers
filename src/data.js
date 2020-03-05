@@ -1,13 +1,29 @@
-// import data from './data/injuries/injuries.js';
-// import data from './data/lol/lol.js';
-// import data from './data/patient/patient.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-// import data from './data/steam/steam.js';
-// import data from './data/steam/worldbank.js';
-// import data from './data/pokemon/pokemon.js';
+import data from './data/pokemon/pokemon.js';
 
-// esta es una función de ejemplo
 
-export const example = () => {
-  return 'example';
+export const example = data.pokemon; 
+
+export const tiposDePokemon = () => {
+  example.filter((item) => console.log(item.type))
+}
+tiposDePokemon();
+
+
+
+/*  () => {
+  return example;
 };
+*/
+/*
+function filtrarArreglo(elemento, indice, arreglo)
+{
+    return elemento >= inicial && elemento <= final;
+}
+var filtrado = data.filter(filtrarArreglo);
+alert(filtrado); */ 
+/*export const filtro = function(){
+  example.filter((item) => console.log(item.type))
+} 
+export function filtro(){
+}
+const tipos = example.filter(() => {})*/

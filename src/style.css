@@ -2,35 +2,42 @@ body {
     background-color: #77D5FD;
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    align-content: stretch;
     flex-direction: column;
+    min-height: 100vh;
     margin: 0;
 	padding: 0;
 	border: 0;
 }
 
-
 header {
     display: flex;
-    justify-content: space-between;    
-    align-items: center;
+    width: 100vw;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
 
 }
 
 div {
+    display: block;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: row;
 }
 
 nav { 
-    max-height: 250px;
     background-color: #A0E2FE;
-    justify-content: space-evenly;
+    width: 100vw;
+    height: 70px;
 }
 
-header div {
-    display: flex;
-    justify-content: center;
+.logo {
+    justify-content: flex-start;
+}
+
+.search {
+    justify-content: flex-end;
+    margin: 20px;
 }
 
 header div h1 {
@@ -38,26 +45,28 @@ header div h1 {
 }
 
 header div img {
-    height: 80%;
     align-self: center;
-    padding: 10px;
+    margin: 10px;
 }
 
 div aside {
     background-color: #A0E2FE;
-    width: 8rem;
+    flex: 0.3;
     justify-content: space-around;
     max-width: 250px;
 }
 
 section {
     background-color: white;
-    align-content: stretch;
-    flex-grow: 1;
+    flex: 1;
     justify-content: space-around;
 }
 
 footer {
     background-color: #77D5FD;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100vw;
+    height: 70px;
 
 }
