@@ -2,9 +2,12 @@ import { pokemones } from './data.js';
 
 let home = document.getElementById("derecha");
 let arrayPoke;
+let boton = document.getElementById("search");
+
 
 //Funciona
-function filterByName(enterName) {
+boton.onclick = function(enterName) {
+    enterName = (document.getElementById("ingresaTexto").value);
     arrayPoke = pokemones.filterByName(enterName);
 
     arrayPoke.forEach(pokemon => {
@@ -106,4 +109,4 @@ function sortByCandyCountDown() {
 
 //filterByType("Grass")
 //sortByCandyCountUp()
-sortByCandyCountDown();
+//sortByCandyCountDown();

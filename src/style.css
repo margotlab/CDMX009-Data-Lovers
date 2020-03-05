@@ -58,11 +58,9 @@ button {
 
 aside {
     background-color: #A0E2FE;
-    /* width: 8rem; */
-    /* height: 100%; */
-    width: 20%;
+    width: 20vw;
     justify-content: space-around;
-    /* max-width: 250px; */
+    align-items: flex-start;
 }
 
 section {
@@ -72,7 +70,7 @@ section {
 
 section .derecha {
     height: 100%;
-    width: 80%;
+    width: 70vw;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -103,10 +101,15 @@ section .derecha {
 }
 
 footer {
+    width: 100vw;
     background-color: #77D5FD;
     display: flex;
+    justify-content: center;
 }
 
+footer img {
+    margin: 15px 10px 0px 10px;
+}
 
 .searchBox {
     border-radius: 5px;
