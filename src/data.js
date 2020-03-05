@@ -61,7 +61,7 @@ export const pokemones = {
             }
             return 0;
         });
-    }, // al parecer no da el resultado correcto
+    }, 
     sortByCandyCountUp() {
 
         let arrayCandy = data.pokemon.filter(pokemon => {

@@ -2,11 +2,11 @@ import { pokemones } from './data.js';
 
 let home = document.getElementById("derecha");
 let arrayPoke;
-let boton = document.getElementById("search");
-
+//Declare una funcion para invocar 
+let boton = document.getElementById("search")
 
 //Funciona
-boton.onclick = function(enterName) {
+boton.onclick= function(enterName) {
     enterName = (document.getElementById("ingresaTexto").value);
     arrayPoke = pokemones.filterByName(enterName);
 
