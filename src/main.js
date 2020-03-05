@@ -1,19 +1,20 @@
 import { pokemones } from './data.js';
 
+let home = document.getElementById("derecha");
+let arrayPoke;
+
 //Funciona
-function filterByName(name) {
-    let home = document.getElementById("derecha");
-    let arrayPoke = pokemones.filterByName(name);
+function filterByName(enterName) {
+    arrayPoke = pokemones.filterByName(enterName);
 
     arrayPoke.forEach(pokemon => {
         let column = generarTarjeta(pokemon);
         home.appendChild(column);
     })
 }
-//revisar aun no da resultado
-function ordenarMenorNum() {
-    let home = document.getElementById("derecha");
-    let arrayPoke = pokemones.ordenarMenorNum();
+//Funciona tal vez es mejor cambiar el nombre de las funciones en este archivo
+function callFindAll() {
+    arrayPoke = pokemones.findAll();
 
     arrayPoke.forEach(pokemon => {
         let column = generarTarjeta(pokemon);
@@ -21,22 +22,29 @@ function ordenarMenorNum() {
     })
 }
 //Funciona
-function findAll() {
-    let home = document.getElementById("derecha"); //esta linea solo es para aderir la info al dom
-    let arrayPoke = pokemones.findAll();
+function findByNumber(enterNum) {
+    arrayPoke = pokemones.findByNumber(enterNum);
 
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
-}
- 
-function findByNumber(numPoke) {
-    let home = document.getElementById("derecha");
-    let poke = pokemones.findByNumber(numPoke);
-
-    let column = generarTarjeta(poke);
+    let column = generarTarjeta(arrayPoke);
     home.appendChild(column);
+}
+//Funciona
+function sortByNameUp() {
+    arrayPoke = pokemones.sortByNameUp();
+
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+//Funciona
+function sortByNameDown() {
+    arrayPoke = pokemones.sortByNameDown();
+
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
 }
 
 //Aqui realice la funcion para generar las tarjetas
@@ -62,19 +70,8 @@ function generarTarjeta(pokemon) {
     return card;
 }
 
-function sortByNameUp() {
-    let home = document.getElementById("derecha");
-    let arrayPoke = pokemones.sortByNameUp();
-
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
-}
-
-function sortByNameDown() {
-    let home = document.getElementById("derecha");
-    let arrayPoke = pokemones.sortByNameDown();
+function filterByType() {
+    arrayPoke = pokemones.filterByType();
 
     arrayPoke.forEach(pokemon => {
         let column = generarTarjeta(pokemon);
@@ -83,7 +80,6 @@ function sortByNameDown() {
 }
 
 function sortByCandyCountUp() {
-    let home = document.getElementById("derecha");
     let arrayPoke = pokemones.sortByCandyCountUp();
 
     arrayPoke.forEach(pokemon => {
@@ -93,8 +89,8 @@ function sortByCandyCountUp() {
 }
 
 function sortByCandyCountDown() {
-    let home = document.getElementById("derecha");
-    let arrayPoke = pokemones.sortByCandyCount();
+
+    let arrayPoke = pokemones.sortByCandyCountDown();
 
     arrayPoke.forEach(pokemon => {
         let column = generarTarjeta(pokemon);
@@ -102,10 +98,12 @@ function sortByCandyCountDown() {
     })
 }
 
-//sortByCandyCountUp()
-//sortByCandyCountDown();
-//sortByNameDown();
-//sortByNameUp();
+//filterByName("cha");
+//callFindAll()
 //findByNumber("10");
-//filterByName("char");
-findAll()
+//sortByNameUp();
+//sortByNameDown();
+
+//filterByType("Grass")
+//sortByCandyCountUp()
+sortByCandyCountDown();
