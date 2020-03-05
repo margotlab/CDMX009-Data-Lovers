@@ -1,33 +1,80 @@
 * {
     margin: 0px;
     padding: 0px;
+    border: 0px;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
     background-color: #77D5FD;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+header {
+    display: flex;
+    width 100vw;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* header {
-    height: 100px;
-    width: 100%;
-    background-color: aqua;
-} */
+header .logo {
+vertical-align: middle;
+}
 
-.derecha {
+header div h1 {
+    font-size: 2em;
+    display: inline;
+    }
+
+header input {
+    height: 1.5em;
+}
+
+header div img {
+    height: 10vh;
+    min-height: .5em;
+    align-self: center;
+    padding: 10px;
+}                   
+
+nav { 
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #A0E2FE;
+    width: 100vw;
+    height: 70px;
+}
+
+nav div {
+    align-self: center;
+}
+
+button {
+    padding: 10px 5px 0 5px;
+    background-color: transparent;
+}
+
+aside {
+    background-color: #A0E2FE;
+    width: 20vw;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+section {
     height: 100%;
-    width: 80%;
+    display: flex;
+}
+
+section .derecha {
+    height: 100%;
+    width: 70vw;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.principal {
-    height: 100%;
-    display: flex;
-    7/*background-color: teal;*/
 }
 
 .card {
@@ -35,7 +82,7 @@ body {
     height: 200px;
     width: 200px;
     border-radius: 5%;
-    margin: 20px 30px;
+    margin: 20px;
 }
 
 .styleImg {
@@ -46,64 +93,35 @@ body {
 }
 
 .cardText {
-    font-size: 16px;
+    font-size: 1em;
+    font-weight: 500;
     text-align: center;
     margin: 20px;
     color: #33475B;
-    font-weight: 500;
 }
-/********************/
 
 footer {
+    width: 100vw;
     background-color: #77D5FD;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-aside {
-    background-color: #A0E2FE;
-    /* width: 8rem; */
-    /* height: 100%; */
-    width: 20%;
-    justify-content: space-around;
-    /* max-width: 250px; */
-}
-
-nav { 
-    max-height: 250px;
-    background-color: #A0E2FE;
-    justify-content: space-evenly;
-}
-
-header div {
     display: flex;
     justify-content: center;
 }
 
-header div h1 {
-    font-size: 35px;
-}
-
-header div img {
-    height: 80%;
-    align-self: center;
-    padding: 10px;
+footer img {
+    margin: 15px 10px 0px 10px;
 }
 
 .searchBox {
     border-radius: 5px;
+    width: 200px;
     height: 40px;
 }
 
-.searchBtn{
+.searchBtn {
     width: 40px;
     height: 40px;
     background-image: url(img/Lupa.svg);
     margin: 10px;
     background-color: transparent;
-    border: none;
+    background-repeat: no-repeat;
 }
