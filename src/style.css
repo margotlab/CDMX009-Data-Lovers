@@ -75,7 +75,7 @@ aside {
     /* max-width: 250px; */
 }
 
-nav {
+nav { 
     max-height: 250px;
     background-color: #A0E2FE;
     justify-content: space-evenly;
