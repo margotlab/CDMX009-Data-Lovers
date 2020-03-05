@@ -1,72 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     background-color: #77D5FD;
-    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-	padding: 0;
-	border: 0;
 }
 
 header {
     display: flex;
-    width: 100vw;
-    flex-direction: row;
-    height: 100px;
+    width 100vw;
     justify-content: space-between;
-
+    align-items: center;
 }
 
-div {
-    display: block;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: row;
+header .logo {
+vertical-align: middle;
 }
+
+header div h1 {
+    font-size: 2em;
+    display: inline;
+    }
+
+header input {
+    height: 1.5em;
+}
+
+header div img {
+    height: 10vh;
+    min-height: .5em;
+    align-self: center;
+    padding: 10px;
+}                   
 
 nav { 
+    display: flex;
+    justify-content: space-evenly;
     background-color: #A0E2FE;
     width: 100vw;
     height: 70px;
 }
 
-.logo {
-    justify-content: flex-start;
-}
-
-.search {
-    justify-content: flex-end;
-    margin: 20px;
-}
-
-header div h1 {
-    font-size: 35px;
-}
-
-header div img {
+nav div {
     align-self: center;
-    margin: 10px;
 }
 
-div aside {
+button {
+    padding: 10px 5px 0 5px;
+    background-color: transparent;
+}
+
+aside {
     background-color: #A0E2FE;
-    flex: 0.3;
+    /* width: 8rem; */
+    /* height: 100%; */
+    width: 20%;
     justify-content: space-around;
-    max-width: 250px;
+    /* max-width: 250px; */
 }
 
 section {
+    height: 100%;
+    display: flex;
+}
+
+section .derecha {
+    height: 100%;
+    width: 80%;
     background-color: white;
-    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.card {
+    background: #F2F2F2;
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    margin: 20px;
+}
+
+.styleImg {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.cardText {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px;
+    color: #33475B;
 }
 
 footer {
     background-color: #77D5FD;
-    flex-direction: row;
-    align-items: flex-end;
-    width: 100vw;
-    height: 70px;
+    display: flex;
+}
 
+
+.searchBox {
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+}
+
+.searchBtn {
+    width: 40px;
+    height: 40px;
+    background-image: url(img/Lupa.svg);
+    margin: 10px;
+    background-color: transparent;
+    background-repeat: no-repeat;
 }
