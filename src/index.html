@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Data Lovers</title>
@@ -8,65 +9,64 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="#"><img src="img/Pokebola.svg" alt="Pokedex"></a>
-      <h1>Pokedex</h1> 
-    </div>
-    <div class="search">
-      <input type="text" class="searchBox" id="ingresaTexto" placeholder="Ingresa nombre o número">
-      <input type="button" class="searchBtn" id="search">
-    </div>
-  </header>
-  <nav>
-    <div class="order">
-      <button id="upNumber"><img src="img/Up.svg" alt=""></button>
-      Número
-      <button id="downNumber"><img src="img/Down.svg" alt=""></button>
-    </div>
-    <div class="order">
-      <button id="upName"><img src="img/Up.svg" alt=""></button>
-      Nombre
-      <button id="downName"><img src="img/Down.svg" alt=""></button>
-    </div>
-    <div class="order">
-      <button id="upKm"><img src="img/Up.svg" alt=""></button>
-      Kilómetros
-      <button id="downKm"><img src="img/Down.svg" alt=""></button>
-    </div>
 
-  </nav>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="img/Pokebola.svg" alt="Pokedex"></a>
+            <h1>Pokedex</h1>
+        </div>
+        <div class="search">
+            <input type="text" class="searchBox" id="enterTextBox" placeholder="Ingresa nombre o número">
+            <input type="button" class="searchBtn" id="search">
+        </div>
+    </header>
+    <nav>
+        <div class="order">
+            <button id="upNumber"><img src="img/Up.svg" alt=""></button> Número
+            <button id="downNumber"><img src="img/Down.svg" alt=""></button>
+        </div>
+        <div class="order">
+            <button id="upName"><img src="img/Up.svg" alt=""></button> Nombre
+            <button id="downName"><img src="img/Down.svg" alt=""></button>
+        </div>
+        <div class="order">
+            <button id="upKm"><img src="img/Up.svg" alt=""></button> Kilómetros
+            <button id="downKm"><img src="img/Down.svg" alt=""></button>
+        </div>
+
+    </nav>
     <section class="principal">
-      <aside id="type" class="izquierda">
-        <button id="Fire"><img src="img/Fire.svg" alt="Dire"></button>
-        <button id="Bug"><img src="img/Bug.svg" alt="Bug"></button>
-        <button id="Dark"><img src="img/Dark.svg" alt="Dark"></button>
-        <button id="Electric"><img src="img/Electric.svg" alt="Electric"></button>
-        <button id="Flying"><img src="img/Flying.svg" alt="Flying"></button>
-        <button id="Ghost"><img src="img/Ghost.svg" alt="Ghost"></button>
-        <button id="Ice"><img src="img/Ice.svg" alt="Ice"></button>
-        <button id="Normal"><img src="img/Normal.svg" alt="Normal"></button>
-        <button id="Poison"><img src="img/Poison.svg" alt="Poison"></button>
-        <button id="Rock"><img src="img/Rock.svg" alt="Rock"></button>
-        <button id="Steel"><img src="img/Steel.svg" alt="Steel"></button>
-        <button id="Water"><img src="img/Water.svg" alt="Water"></button>
-        <button id="Dragon"><img src="img/Dragon.svg" alt="Dragon"></button>
-        <button id="Fairy"><img src="img/Fairy.svg" alt="Fairy"></button>
-        <button id="Grass"><img src="img/Grass.svg" alt="Grass"></button>
-        <button id="Psychic"><img src="img/Psychic.svg" alt="Psychic"></button>
-        <button id="Fighting"><img src="img/Fighting.svg" alt="Fighting"></button>
-        <button id="Ground"><img src="img/Ground.svg" alt="Ground"></button>
-      </aside>
-      <div class="derecha" id="derecha">
-        <!-- <section>Pokemones</section> -->
-      </div>
+        <aside id="type" class="izquierda">
+            <button class="typePoke" id="Fire"><img src="img/Fire.svg" alt="Dire"></button>
+            <button class="typePoke" id="Bug"><img src="img/Bug.svg" alt="Bug"></button>
+            <button class="typePoke" id="Dark"><img src="img/Dark.svg" alt="Dark"></button>
+            <button class="typePoke" id="Electric"><img src="img/Electric.svg" alt="Electric"></button>
+            <button class="typePoke" id="Flying"><img src="img/Flying.svg" alt="Flying"></button>
+            <button class="typePoke" id="Ghost"><img src="img/Ghost.svg" alt="Ghost"></button>
+            <button class="typePoke" id="Ice"><img src="img/Ice.svg" alt="Ice"></button>
+            <button class="typePoke" id="Normal"><img src="img/Normal.svg" alt="Normal"></button>
+            <button class="typePoke" id="Poison"><img src="img/Poison.svg" alt="Poison"></button>
+            <button class="typePoke" id="Rock"><img src="img/Rock.svg" alt="Rock"></button>
+            <button class="typePoke" id="Steel"><img src="img/Steel.svg" alt="Steel"></button>
+            <button class="typePoke" id="Water"><img src="img/Water.svg" alt="Water"></button>
+            <button class="typePoke" id="Dragon"><img src="img/Dragon.svg" alt="Dragon"></button>
+            <button class="typePoke" id="Fairy"><img src="img/Fairy.svg" alt="Fairy"></button>
+            <button class="typePoke" id="Grass"><img src="img/Grass.svg" alt="Grass"></button>
+            <button class="typePoke" id="Psychic"><img src="img/Psychic.svg" alt="Psychic"></button>
+            <button class="typePoke" id="Fighting"><img src="img/Fighting.svg" alt="Fighting"></button>
+            <button class="typePoke" id="Ground"><img src="img/Ground.svg" alt="Ground"></button>
+        </aside>
+        <div class="derecha" id="derecha">
+
+        </div>
     </section>
     <footer>
-      <a href="www.facebook.com"><img src="img/Facebook.svg" alt="Siguenos en Facebook"></a>
-      <a href="www.twitter.com"><img src="img/Twitter.svg" alt="Siguenos en Twitter"></a>
-      <a href="www.youtube.com"><img src="img/Youtube.svg" alt="Siguenos en Youtube"></a>
+        <a href="www.facebook.com"><img src="img/Facebook.svg" alt="Siguenos en Facebook"></a>
+        <a href="www.twitter.com"><img src="img/Twitter.svg" alt="Siguenos en Twitter"></a>
+        <a href="www.youtube.com"><img src="img/Youtube.svg" alt="Siguenos en Youtube"></a>
     </footer>
     <script type="module" src="main.js"></script>
 </body>
+
 </html>

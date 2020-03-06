@@ -24,16 +24,6 @@ export const pokemones = {
         })
         return pokemonFind;
     },
-    filterByType(clickType) {
-        let pokemonResult = {};
-
-        data.pokemon.forEach(pokemon => {
-            if (clickType == pokemon.type) {
-                pokemonResult = pokemon;
-            }
-        })
-        return pokemonResult;
-    },
 
     findAll() {
         return data.pokemon;
@@ -61,7 +51,7 @@ export const pokemones = {
             }
             return 0;
         });
-    }, 
+    },
     sortByCandyCountUp() {
 
         let arrayCandy = data.pokemon.filter(pokemon => {

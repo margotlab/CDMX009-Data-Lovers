@@ -2,21 +2,24 @@ import { pokemones } from './data.js';
 
 let home = document.getElementById("derecha");
 let arrayPoke;
-//Declare una funcion para invocar 
-let boton = document.getElementById("search")
+//Aqui declaro las variables para llamar a las funciones 
+let searchButton = document.getElementById("search");
+let sortNameUp = document.getElementById("upName");
+let sortNameDown = document.getElementById("downName");
 
 //Funciona
-boton.onclick= function(enterName) {
-    enterName = (document.getElementById("ingresaTexto").value);
-    arrayPoke = pokemones.filterByName(enterName);
+searchButton.onclick = function() {
+        let enterName = (document.getElementById("enterTextBox").value);
+        arrayPoke = pokemones.filterByName(enterName);
 
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
-}
-//Funciona tal vez es mejor cambiar el nombre de las funciones en este archivo
+        arrayPoke.forEach(pokemon => {
+            let column = generarTarjeta(pokemon);
+            home.appendChild(column);
+        })
+    }
+    //Funciona tal vez es mejor cambiar el nombre de las funciones en este archivo
 function callFindAll() {
+
     arrayPoke = pokemones.findAll();
 
     arrayPoke.forEach(pokemon => {
@@ -32,16 +35,16 @@ function findByNumber(enterNum) {
     home.appendChild(column);
 }
 //Funciona
-function sortByNameUp() {
-    arrayPoke = pokemones.sortByNameUp();
+sortNameUp.onclick = function() {
+        arrayPoke = pokemones.sortByNameUp();
 
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
-}
-//Funciona
-function sortByNameDown() {
+        arrayPoke.forEach(pokemon => {
+            let column = generarTarjeta(pokemon);
+            home.appendChild(column);
+        })
+    }
+    //Funciona
+sortNameDown.onclick = function() {
     arrayPoke = pokemones.sortByNameDown();
 
     arrayPoke.forEach(pokemon => {
@@ -49,6 +52,18 @@ function sortByNameDown() {
         home.appendChild(column);
     })
 }
+let btns = document.querySelectorAll(".typePoke")
+
+btns.forEach(boton => {
+    boton.addEventListener('click', e => {
+        arrayPoke = pokemones.filterByType(boton.id);
+
+        arrayPoke.forEach(pokemon => {
+            let column = generarTarjeta(pokemon);
+            home.appendChild(column);
+        })
+    })
+})
 
 //Aqui realice la funcion para generar las tarjetas
 function generarTarjeta(pokemon) {
@@ -71,15 +86,6 @@ function generarTarjeta(pokemon) {
     card.appendChild(cardText);
 
     return card;
-}
-
-function filterByType() {
-    arrayPoke = pokemones.filterByType();
-
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
 }
 
 function sortByCandyCountUp() {
