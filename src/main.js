@@ -1,37 +1,48 @@
 import { pokemones } from './data.js';
 
-
-
+//nodos
+let logo = document.getElementById("logo");
 let home = document.getElementById("derecha");
+let searchButton = document.getElementById("search");
+let upSortByName = document.getElementById("upName");
+
 let arrayPoke;
-//Declare una funcion para invocar 
-let boton = document.getElementById("search")
 
-//Funciona
-boton.onclick= function(enterName) {
-    enterName = (document.getElementById("ingresaTexto").value);
-    arrayPoke = pokemones.filterByName(enterName);
+//funcion para actualizar pagina cuando presionan el logo
+function refreshPage(){
+    window.location.reload();
+}
 
+//creamos una funcion general para que se genere la tarjeta para cada resultado
+function createCardForResult(){
     arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
+    let column = generarTarjeta(pokemon);
+    home.appendChild(column);
     })
 }
+
+function dameNombre(enterName) {
+    enterName = (document.getElementById("ingresaTexto").value);
+    arrayPoke = pokemones.filterByName(enterName);
+    arrayPoke.forEach(createCardForResult());
+}
+
+//Funciones de botones, etc
+searchButton.addEventListener ("click", dameNombre)
+upSortByName.addEventListener("click", sortByNameDown)
+logo.addEventListener ("click", refreshPage)
+//window.onload = callFindAll();
+
+
+
 //Funciona tal vez es mejor cambiar el nombre de las funciones en este archivo
 function callFindAll() {
     arrayPoke = pokemones.findAll();
-
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
+    arrayPoke.forEach(createCardForResult())
 }
-window.onload = callFindAll();
-
 //Funciona
 function findByNumber(enterNum) {
     arrayPoke = pokemones.findByNumber(enterNum);
-
     let column = generarTarjeta(arrayPoke);
     home.appendChild(column);
 }
