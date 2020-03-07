@@ -4,6 +4,8 @@ import { pokemones } from './data.js'
 let logo = document.getElementById("logo");
 let home = document.getElementById("derecha");
 let searchButton = document.getElementById("search");
+let upSortByNum = document.getElementById("upNumber");
+let downSortByNum = document.getElementById("downNum");
 let upSortByName = document.getElementById("upName");
 let downSortByName = document.getElementById("downName");
 let upSortByCandy = document.getElementById("upCandy");
@@ -27,19 +29,17 @@ function createCardForResult(){
 }
 
 // Funcion *Pendiente* para filtrar por tipo
-function filterByType() {
-    arrayPoke = pokemones.filterByType();
-    arrayPoke.forEach(pokemon => {
-        let column = generarTarjeta(pokemon);
-        home.appendChild(column);
-    })
+function searchType(enterType) {
+    enterType = (document.getElementById("ingresaTexto").value);
+    arrayPoke = pokemones.filterByName(enterName);
+    createCardForResult();
 }
 
 //funcion para buscar por nombre y numero
 function searchNumName(enterName) {
     enterName = (document.getElementById("ingresaTexto").value);
     arrayPoke = pokemones.filterByName(enterName);
-    arrayPoke.forEach(createCardForResult());
+    createCardForResult();
 }
 
 //Funcion para ordenar por mas dulces
@@ -54,6 +54,42 @@ function sortByCandyCountUp() {
 //Funcion para ordenar por menos dulces
 function sortByCandyCountDown() {
     let arrayPoke = pokemones.sortByCandyCountDown();
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+//Funcion para ordenar por mas dulces
+function sortByKmCountUp() {
+    let arrayPoke = pokemones.sortByKmCountUp();
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+//Funcion para ordenar por menos dulces
+function sortByKmCountDown() {
+    let arrayPoke = pokemones.sortByKmCountDown();
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+//Funcion para ordenar por mas dulces
+function sortByNumUp() {
+    let arrayPoke = pokemones.sortByNumUp();
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+//Funcion para ordenar por menos dulces
+function sortByNumDown() {
+    let arrayPoke = pokemones.sortByNumDown();
     arrayPoke.forEach(pokemon => {
         let column = generarTarjeta(pokemon);
         home.appendChild(column);
@@ -85,8 +121,26 @@ function sortByNameDown() {
     })
 }
 
-//Aqui realice la funcion para generar las tarjetas
+//Aqui realice la funcion para generar las tarjetas idex
 function generarTarjeta(pokemon) {
+    let card = document.createElement("div");
+    card.setAttribute("class", "card");
+    let cardHead = document.createElement("div");
+    let image = document.createElement("img");
+    image.setAttribute("class", "styleImg");
+    image.setAttribute("alt", pokemon.name);
+    image.setAttribute("src", pokemon.img);
+    let cardText = document.createElement("p");
+    cardText.setAttribute("class", "cardText")
+    cardText.textContent = `${pokemon.name} ${pokemon.num}`;
+    cardHead.appendChild(image);
+    card.appendChild(cardHead);
+    card.appendChild(cardText);
+    return card;
+}
+
+//Funcion para generar tarjetas detalle
+function generarDetalle(pokemon) {
     let card = document.createElement("div");
     card.setAttribute("class", "card");
     let cardHead = document.createElement("div");
@@ -106,10 +160,13 @@ function generarTarjeta(pokemon) {
 //Funciones de botones, etc
 logo.addEventListener ("click", refreshPage)
 searchButton.addEventListener ("click", searchNumName)
+upSortByNum.addEventListener("click", sortByNumUp)
+downSortByNum.addEventListener("click", sortByNumDown)
 upSortByName.addEventListener("click", sortByNameUp)
 downSortByName.addEventListener("click", sortByNameDown)
 upSortByCandy.addEventListener("click", sortByCandyCountUp)
 downSortByCandy.addEventListener("click", sortByCandyCountDown)
 upSortByKm.addEventListener("click", sortByKmCountUp)
 downSortByKm.addEventListener("click", sortByKmCountDown)
+
 //window.onload = callFindAll();

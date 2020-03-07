@@ -24,6 +24,73 @@ export const pokemones = {
         })
         return pokemonFind;
     },
+
+    sortByKmCountUp() {
+
+        let arrayKm = data.pokemon.filter(pokemon => {
+            return pokemon.egg !== undefined
+        });
+    
+        return arrayKm.sort(function(a, b) {
+            if (a.egg > b.egg) {
+                return 1;
+            }
+            if (a.egg < b.egg) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+    
+    sortByKmCountDown() {
+        let arrayKm = data.pokemon.filter(pokemon => {
+            return pokemon.egg !== undefined
+        });
+    
+        return arrayKm.sort(function(a, b) {
+            if (a.egg < b.egg) {
+                return 1;
+            }
+            if (a.egg > b.egg) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+
+    sortByNumUp() {
+        let arrayNum = data.pokemon.filter(pokemon => {
+            return pokemon.num !== undefined
+        });
+    
+        return arrayNum.sort(function(a, b) {
+            if (a.num > b.num) {
+                return 1;
+            }
+            if (a.num < b.num) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+
+    
+    sortByNumDown() {
+        let arrayNum = data.pokemon.filter(pokemon => {
+            return pokemon.num !== undefined
+        });
+    
+        return arrayNum.sort(function(a, b) {
+            if (a.num < b.num) {
+                return 1;
+            }
+            if (a.num > b.num) {
+                return -1;
+            }
+            return 0;
+        });
+    },
+
     filterByType(clickType) {
         let pokemonResult = {};
 
@@ -62,6 +129,9 @@ export const pokemones = {
             return 0;
         });
     }, 
+
+
+    
     sortByCandyCountUp() {
 
         let arrayCandy = data.pokemon.filter(pokemon => {
@@ -94,4 +164,4 @@ export const pokemones = {
             return 0;
         });
     }
-};
+}
