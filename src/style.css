@@ -14,7 +14,7 @@ body {
 
 header {
     display: flex;
-    width 100vw;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -36,7 +36,7 @@ header div {
     display: flex;
     padding: 5px;
 }
-    
+
 header div input {
     border-radius: 5px;
     width: 200px;
@@ -49,9 +49,9 @@ header div img {
     min-height: .5em;
     align-self: center;
     padding: 10px;
-}                   
+}
 
-nav { 
+nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -123,7 +123,6 @@ footer img {
     height: 45px;
     margin: 15px 10px 0px 10px;
 }
-
 
 .searchBtn {
     width: 40px;
