@@ -28,7 +28,7 @@ export const pokemones = {
     sortByKmCountUp() {
 
         let arrayKm = data.pokemon.filter(pokemon => {
-            return pokemon.egg !== undefined
+            return pokemon.egg !== "Not in eggs"
         });
     
         return arrayKm.sort(function(a, b) {
@@ -44,7 +44,7 @@ export const pokemones = {
     
     sortByKmCountDown() {
         let arrayKm = data.pokemon.filter(pokemon => {
-            return pokemon.egg !== undefined
+            return pokemon.egg !== "Not in eggs"
         });
     
         return arrayKm.sort(function(a, b) {

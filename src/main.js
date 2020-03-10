@@ -12,10 +12,8 @@ let upSortByCandy = document.getElementById("upCandy");
 let downSortByCandy = document.getElementById("downCandy");
 let upSortByKm = document.getElementById("upKm");
 let downSortByKm = document.getElementById("downKm");
-let typeBtns = document.querySelectorAll(".type");
 
 let arrayPoke;
-
 
 //funcion para actualizar pagina cuando presionan el logo
 function refreshPage(){
@@ -50,31 +48,7 @@ function sortByCandyCountDown() {
     createCardForResult();
 };
 
-//Funcion para ordenar por mas dulces
-function sortByKmCountUp() {
-    arrayPoke = pokemones.sortByKmCountUp();
-    createCardForResult();
-};
-
-//Funcion para ordenar por menos dulces
-function sortByKmCountDown() {
-    arrayPoke = pokemones.sortByKmCountDown();
-    createCardForResult();
-};
-
-//Funcion para ordenar por mas dulces
-function sortByNumUp() {
-    arrayPoke = pokemones.sortByNumUp();
-    createCardForResult();
-};
-
-//Funcion para ordenar por menos dulces
-function sortByNumDown() {
-    arrayPoke = pokemones.sortByNumDown();
-    createCardForResult();
-};
-
-//Funcion para mostrar todos los pokemones - Pendiente de agregar al DOM
+//Funcion para mostrar todos los pokemones 
 function callFindAll() {
     arrayPoke = pokemones.findAll();
 createCardForResult();
@@ -91,6 +65,31 @@ function sortByNameDown() {
     arrayPoke = pokemones.sortByNameDown();
     createCardForResult();
 };
+
+//Funcion para ordenar por mas Km
+function sortByKmCountUp() {
+    arrayPoke = pokemones.sortByKmCountUp();
+    createCardForResult();
+};
+
+//Funcion para ordenar por menos Km
+function sortByKmCountDown() {
+    arrayPoke = pokemones.sortByKmCountDown();
+    createCardForResult();
+};
+
+//Funcion para ordenar menos a mas por numero
+function sortByNumUp() {
+    arrayPoke = pokemones.sortByNumUp();
+    createCardForResult();
+};
+
+//Funcion para ordenar mas a menos por numero
+function sortByNumDown() {
+    arrayPoke = pokemones.sortByNumDown();
+    createCardForResult();
+};
+
 
 //Aqui realice la funcion para generar las tarjetas idex
 function generarTarjeta(pokemon) {
@@ -147,8 +146,3 @@ upSortByCandy.addEventListener("click", sortByCandyCountUp)
 downSortByCandy.addEventListener("click", sortByCandyCountDown)
 upSortByKm.addEventListener("click", sortByKmCountUp)
 downSortByKm.addEventListener("click", sortByKmCountDown)
-typeBtns.forEach(typeBut=>{
-    typeBut.addEventListener("click", refreshPage)
-  })
-
-//window.onload = callFindAll();
