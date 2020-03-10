@@ -14,22 +14,34 @@ body {
 
 header {
     display: flex;
-    width 100%;
+    width: 100vw;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-header .logo {
-    vertical-align: middle;
+header button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-header div h1 {
+header button h1 {
     font-size: 2em;
-    display: inline;
+    align-self: center;
+    margin: 5px;
 }
 
-header input {
-    height: 1.5em;
+header div {
+    display: flex;
+    padding: 5px;
+}
+
+header div input {
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    align-self: center;
 }
 
 header div img {
@@ -41,6 +53,7 @@ header div img {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #A0E2FE;
     width: 100vw;
@@ -107,19 +120,16 @@ footer {
 }
 
 footer img {
+    height: 45px;
     margin: 15px 10px 0px 10px;
-}
-
-.searchBox {
-    border-radius: 5px;
-    width: 200px;
-    height: 40px;
 }
 
 .searchBtn {
     width: 40px;
     height: 40px;
     background-image: url(img/Lupa.svg);
+    background-position: center;
+    background-size: contain;
     margin: 10px;
     background-color: transparent;
     background-repeat: no-repeat;
