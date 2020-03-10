@@ -95,12 +95,12 @@ function sortByKmDown() {
 
 //Funcion para ordenar por dulces
 function sortByCandyCountUp() {
-    let arrayPoke = pokemones.sortByCandyCountUp();
+    arrayPoke = pokemones.sortByCandyCountUp();
     createCardForResult();
 }
 
 function sortByCandyCountDown() {
-    let arrayPoke = pokemones.sortByCandyCountDown();
+    arrayPoke = pokemones.sortByCandyCountDown();
     createCardForResult();
 }
 

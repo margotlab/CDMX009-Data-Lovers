@@ -95,6 +95,7 @@ section .derecha {
     width: 200px;
     border-radius: 5%;
     margin: 20px;
+    box-shadow: 2px 2px 5px rgba(152, 161, 164, 0.5);
 }
 
 .styleImg {
