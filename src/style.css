@@ -21,16 +21,16 @@ header {
 }
 
 header button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+display: flex;
+flex-direction: row;
+justify-content: center;
 }
 
 header button h1 {
     font-size: 2em;
     align-self: center;
     margin: 5px;
-}
+    }
 
 header div {
     display: flex;
