@@ -25,7 +25,7 @@ function generarTarjeta(pokemon) {
     image.setAttribute("alt", pokemon.name);
     image.setAttribute("src", pokemon.img);
     let cardText = document.createElement("p");
-    cardText.setAttribute("class", "cardText")
+    cardText.setAttribute("class", "cardText");
     cardText.textContent = `${pokemon.name} ${pokemon.num}`;
     cardHead.appendChild(image);
     card.appendChild(cardHead);
@@ -84,23 +84,23 @@ function sortByNameDown() {
 
 //Funciones para ordenar por Km
 function sortByKmUp() {
-    arrayPoke = pokemones.sortByKmUp();
+    arrayPoke = pokemones.sortByKmUp(arrayPoke);
     createCardForResult();
 }
 
 function sortByKmDown() {
-    arrayPoke = pokemones.sortByKmDown();
+    arrayPoke = pokemones.sortByKmDown(arrayPoke);
     createCardForResult();
 }
 
 //Funcion para ordenar por dulces
 function sortByCandyCountUp() {
-    arrayPoke = pokemones.sortByCandyCountUp();
+    arrayPoke = pokemones.sortByCandyCountUp(arrayPoke);
     createCardForResult();
 }
 
 function sortByCandyCountDown() {
-    arrayPoke = pokemones.sortByCandyCountDown();
+    arrayPoke = pokemones.sortByCandyCountDown(arrayPoke);
     createCardForResult();
 }
 
@@ -116,13 +116,13 @@ btns.forEach(boton => {
 
 //Funciones de botones, etc
 window.onload = callFindAll();
-logo.addEventListener("click", refreshPage)
-searchButton.addEventListener("click", searchNumName)
-upSortByName.addEventListener("click", sortByNameUp)
-downSortByName.addEventListener("click", sortByNameDown)
-upSortByCandy.addEventListener("click", sortByCandyCountUp)
-downSortByCandy.addEventListener("click", sortByCandyCountDown)
-upSortByKm.addEventListener("click", sortByKmUp)
-downSortByKm.addEventListener("click", sortByKmDown)
-downNum.addEventListener("click", sortByNumDown)
-upNum.addEventListener("click", sortByNumUp)
+logo.addEventListener("click", refreshPage);
+searchButton.addEventListener("click", searchNumName);
+upSortByName.addEventListener("click", sortByNameUp);
+downSortByName.addEventListener("click", sortByNameDown);
+upSortByCandy.addEventListener("click", sortByCandyCountUp);
+downSortByCandy.addEventListener("click", sortByCandyCountDown);
+upSortByKm.addEventListener("click", sortByKmUp);
+downSortByKm.addEventListener("click", sortByKmDown);
+downNum.addEventListener("click", sortByNumDown);
+upNum.addEventListener("click", sortByNumUp);
