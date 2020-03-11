@@ -126,3 +126,21 @@ upSortByKm.addEventListener("click", sortByKmUp);
 downSortByKm.addEventListener("click", sortByKmDown);
 downNum.addEventListener("click", sortByNumDown);
 upNum.addEventListener("click", sortByNumUp);
+
+
+function generarTarjeta2(pokemon) {
+    let card = document.createElement("div");
+    card.setAttribute("class", "card");
+    let cardHead = document.createElement("div");
+    let image = document.createElement("img");
+    image.setAttribute("class", "styleImg");
+    image.setAttribute("alt", pokemon.name);
+    image.setAttribute("src", pokemon.img);
+    let cardText = document.createElement("p");
+    cardText.setAttribute("class", "cardText");
+    cardText.textContent = `${pokemon.height} ${pokemon.weight} ${pokemon.type}`;
+    cardHead.appendChild(image);
+    card.appendChild(cardHead);
+    card.appendChild(cardText);
+    return card;
+}
