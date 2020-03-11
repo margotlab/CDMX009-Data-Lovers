@@ -71,7 +71,7 @@ export const pokemones = {
 
     sortByKmUp(arrayPoke) {
         let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
-        let arrayEgg = data.pokemon.filter(pokemon => {
+        let arrayEgg = dataEnter.filter(pokemon => {
             return pokemon.egg !== "Not in Eggs"
         });
 
@@ -87,7 +87,8 @@ export const pokemones = {
     },
 
     sortByKmDown() {
-        let arrayEgg = data.pokemon.filter(pokemon => {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayEgg = dataEnter.filter(pokemon => {
             return pokemon.egg !== "Not in Eggs"
         });
 
@@ -103,7 +104,8 @@ export const pokemones = {
     },
 
     sortByCandyCountUp() {
-        let arrayCandy = data.pokemon.filter(pokemon => {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayCandy = dataEnter.filter(pokemon => {
             return pokemon.candy_count !== undefined
         });
 
@@ -119,7 +121,8 @@ export const pokemones = {
     },
 
     sortByCandyCountDown() {
-        let arrayCandy = data.pokemon.filter(pokemon => {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayCandy = dataEnter.filter(pokemon => {
             return pokemon.candy_count !== undefined
         });
 

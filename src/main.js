@@ -84,23 +84,23 @@ function sortByNameDown() {
 
 //Funciones para ordenar por Km
 function sortByKmUp() {
-    arrayPoke = pokemones.sortByKmUp();
+    arrayPoke = pokemones.sortByKmUp(arrayPoke);
     createCardForResult();
 }
 
 function sortByKmDown() {
-    arrayPoke = pokemones.sortByKmDown();
+    arrayPoke = pokemones.sortByKmDown(arrayPoke);
     createCardForResult();
 }
 
 //Funcion para ordenar por dulces
 function sortByCandyCountUp() {
-    arrayPoke = pokemones.sortByCandyCountUp();
+    arrayPoke = pokemones.sortByCandyCountUp(arrayPoke);
     createCardForResult();
 }
 
 function sortByCandyCountDown() {
-    arrayPoke = pokemones.sortByCandyCountDown();
+    arrayPoke = pokemones.sortByCandyCountDown(arrayPoke);
     createCardForResult();
 }
 
