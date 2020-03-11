@@ -86,7 +86,7 @@ export const pokemones = {
         });
     },
 
-    sortByKmDown() {
+    sortByKmDown(arrayPoke) {
         let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
         let arrayEgg = dataEnter.filter(pokemon => {
             return pokemon.egg !== "Not in Eggs"
