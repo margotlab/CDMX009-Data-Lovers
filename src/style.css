@@ -14,10 +14,6 @@ body {
 
 header {
     display: flex;
-<<<<<<< HEAD
-=======
-    width: 100vw;
->>>>>>> 8239fe5bf25629a8c01ec8fd4b21e2fbdf6f2ffb
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -98,6 +94,7 @@ section .derecha {
     width: 200px;
     border-radius: 5%;
     margin: 20px;
+    box-shadow: 2px 2px 5px rgba(152, 161, 165, 0.5);
 }
 
 .styleImg {

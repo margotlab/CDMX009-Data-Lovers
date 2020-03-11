@@ -19,7 +19,6 @@ export const pokemones = {
     },
 
     sortByNumUp(arrayPoke) {
-        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
         return dataEnter.sort(function(a, b) {
             if (a.num > b.num) {
                 return 1;
@@ -71,6 +70,7 @@ export const pokemones = {
     },
 
     sortByKmUp(arrayPoke) {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
         let arrayEgg = data.pokemon.filter(pokemon => {
             return pokemon.egg !== "Not in Eggs"
         });
