@@ -1,26 +1,13 @@
-// importamos la función `example`
-//import { example } from "../src/data";
+import pokemones from '../src/data';
 
-require('./main.js');
-require('./data.js');
+describe('probando funcion pokemones', () => {
+    it('should be an object', () => {
+        expect(typeof pokemones).toBe('object');
+    });
 
-/*describe('este es un grupo', () => {
-  it('debería ser un objeto', () => {
-    expect(typeof pokemones).toBe('object');
-  });*/
-
-describe('Este es un grupo', () => {
-  it('debería ser una funcion', () => {
-    expect(typeof pokemones.findAll).toBe('function');
-  });
-
-  it('debería regresar Charmander al ingresar el nombre Charmander en la caja de busqueda', () => {
-    expect(pokemones.findAll("charmander")).toBeTruthy();
-  });
-
-/*describe('filterByName', () => {
-  it('debería regresar el pokemon que corresponda al numero ingresado en la caja de busqueda', () => {
-    expect(typeof findAll).toBe('function');
-  });*/
-
+    describe('pokemones.findAll', () => {
+        it('should be a function', () => {
+            expect(typeof pokemones.findAll).toBe('function');
+        });
+    });
 });

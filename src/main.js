@@ -1,4 +1,4 @@
-import { pokemones } from './data.js'
+import pokemones from './data.js';
 
 //nodos
 let home = document.getElementById("derecha");
@@ -27,7 +27,7 @@ function generarTarjeta(pokemon) {
     let cardText = document.createElement("p");
     cardText.setAttribute("class", "cardText");
     cardText.textContent = `${pokemon.name} ${pokemon.num}`;
-    
+
     cardHead.appendChild(image);
     card.appendChild(cardHead);
     card.appendChild(cardText);
