@@ -13,6 +13,8 @@ let downSortByKm = document.getElementById("downKm");
 let upSortByCandy = document.getElementById("upCandy");
 let downSortByCandy = document.getElementById("downCandy");
 
+let newCardInfo = document.getElementById("");
+
 let arrayPoke;
 
 //Funcion para generar las tarjetas
@@ -129,22 +131,43 @@ downNum.addEventListener("click", sortByNumDown);
 upNum.addEventListener("click", sortByNumUp);
 
 
-function generarTarjeta2(pokemon) {
-    let card = document.createElement("div");
-    card.setAttribute("class", "card");
+function createDataCard(pokemon) {
+    let cardData = document.createElement("div");
+    cardData.setAttribute("class", "cardData"); // generar estilos para cardData
 
-    let cardHead = document.createElement("div");
+    let cardDataImg = document.createElement("div"); // generar estilos para div
     let image = document.createElement("img");
-    image.setAttribute("class", "styleImg");
+    image.setAttribute("class", "CardDataImg"); //generar estilos para esta img
     image.setAttribute("alt", pokemon.name);
     image.setAttribute("src", pokemon.img);
 
-    let cardText = document.createElement("p");
-    cardText.setAttribute("class", "cardText");
-    cardText.textContent = `${pokemon.height} ${pokemon.weight} ${pokemon.type}`;
+    let cardText = document.createElement("div")
+    let text = document.createElement("p");
+    text.setAttribute("class", "text"); //generar estilos para el text
+    text.textContent = `${pokemon.height} ${pokemon.weight} ${pokemon.type}`;
 
-    cardHead.appendChild(image);
-    card.appendChild(cardHead);
+    cardDataImg.appendChild(image);
+    card.appendChild(cardDataImg);
+    cardText.appendChild(text);
     card.appendChild(cardText);
-    return card;
+    return cardData;
+
+    let clickCardData = document.querySelectorAll(".card")
+
+    clickCardData.forEach(boton => {
+    boton.addEventListener('click', e => {
+        arrayPoke = pokemones.filterByType(boton.id);
+        createCardForResult();
+    })
+})
+
+function createCardForResult() {
+    home.innerHTML = "";
+    arrayPoke.forEach(pokemon => {
+        let column = generarTarjeta(pokemon);
+        home.appendChild(column);
+    })
+}
+
+
 }
