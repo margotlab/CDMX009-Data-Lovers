@@ -16,8 +16,4 @@ describe('probando funcion pokemones', () => {
     it('deberia de regresar "Voltorb" al ingresar el numero 100 en el cuadro de busqueda', () => {
         expect(pokemones.filterByName("100")).toBeTruthy();
     });
-
-    it('la lista de pokemon por typo fuego deberia de tener "charmeleon"', () => {
-        expect(pokemonResult).toContain(name.'charmeleon');
-    });
 })

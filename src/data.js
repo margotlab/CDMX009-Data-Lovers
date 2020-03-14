@@ -1,6 +1,5 @@
 import data from './data/pokemon/pokemon.js';
 
-//Entonces a qui estoy declarando un objeto de nombre pokemones
 const pokemones = {
 
     findAll() {
@@ -9,7 +8,7 @@ const pokemones = {
 
     filterByName(enterName) {
         return data.pokemon.filter(pokemon => {
-            return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase()) //pokemon: var que guaradara info de cada iteracion. sentencia
+            return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase())
         });
     },
 
