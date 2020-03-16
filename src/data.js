@@ -1,12 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 
-// esta es una función de ejemplo
-export const example = () => {
-    return 'example';
-
-};
-//Entonces a qui estoy declarando un objeto de nombre pokemones
-export const pokemones = {
+const pokemones = {
 
     findAll() {
         return data.pokemon;
@@ -14,7 +8,7 @@ export const pokemones = {
 
     filterByName(enterName) {
         return data.pokemon.filter(pokemon => {
-            return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase()) //pokemon: var que guaradara info de cada iteracion. sentencia
+            return pokemon.name.toLowerCase().concat(" " + pokemon.num).includes(enterName.toLowerCase())
         });
     },
 
@@ -71,8 +65,9 @@ export const pokemones = {
     },
 
     sortByKmUp(arrayPoke) {
-        let arrayEgg = data.pokemon.filter(pokemon => {
-            return pokemon.egg !== "Not in Eggs"
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayEgg = dataEnter.filter(pokemon => {
+            return pokemon.egg !== "Not in Eggs";
         });
 
         return arrayEgg.sort(function(a, b) {
@@ -86,8 +81,9 @@ export const pokemones = {
         });
     },
 
-    sortByKmDown() {
-        let arrayEgg = data.pokemon.filter(pokemon => {
+    sortByKmDown(arrayPoke) {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayEgg = dataEnter.filter(pokemon => {
             return pokemon.egg !== "Not in Eggs"
         });
 
@@ -102,8 +98,9 @@ export const pokemones = {
         });
     },
 
-    sortByCandyCountUp() {
-        let arrayCandy = data.pokemon.filter(pokemon => {
+    sortByCandyCountUp(arrayPoke) {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayCandy = dataEnter.filter(pokemon => {
             return pokemon.candy_count !== undefined
         });
 
@@ -118,8 +115,9 @@ export const pokemones = {
         });
     },
 
-    sortByCandyCountDown() {
-        let arrayCandy = data.pokemon.filter(pokemon => {
+    sortByCandyCountDown(arrayPoke) {
+        let dataEnter = (arrayPoke != undefined && arrayPoke.length > 0) ? arrayPoke : data.pokemon;
+        let arrayCandy = dataEnter.filter(pokemon => {
             return pokemon.candy_count !== undefined
         });
 
@@ -145,3 +143,5 @@ export const pokemones = {
         return pokemonResult;
     }
 };
+
+export default pokemones;
