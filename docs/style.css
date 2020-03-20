@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #77D5FD;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header button h1 {
+    font-size: 2em;
+    align-self: center;
+    margin: 5px;
+}
+
+header div {
+    display: flex;
+    padding: 5px;
+}
+
+header div input {
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    align-self: center;
+}
+
+header div img {
+    height: 10vh;
+    min-height: .5em;
+    align-self: center;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #A0E2FE;
+    width: 100vw;
+    height: 70px;
+}
+
+nav div {
+    align-self: center;
+}
+
+button {
+    padding: 10px 5px 0 5px;
+    background-color: transparent;
+}
+
+aside {
+    background-color: #A0E2FE;
+    width: 20vw;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+section {
+    height: 100%;
+    display: flex;
+}
+
+section .derecha {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background: #F2F2F2;
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    margin: 20px;
+    box-shadow: 2px 2px 5px rgba(152, 161, 164, 0.5);
+}
+
+.styleImg {
+    height: 120px;
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.cardText {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px;
+    color: #33475B;
+}
+
+footer {
+    width: 100vw;
+    background-color: #77D5FD;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    height: 45px;
+    margin: 15px 10px 0px 10px;
+}
+
+.searchBtn {
+    width: 40px;
+    height: 40px;
+    background-image: url(img/Lupa.svg);
+    background-position: center;
+    background-size: contain;
+    margin: 10px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
